@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_cards_logo_cards",
+  "info": {
+    "displayName": "Counterparty Card",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?(www\\.)?[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/[^\\s#]*)?(#[a-zA-Z0-9-_]+)?$",
+      "required": true,
+      "maxLength": 255
+    },
+    "altText": {
+      "type": "string",
+      "maxLength": 255,
+      "required": false
+    }
+  }
+}

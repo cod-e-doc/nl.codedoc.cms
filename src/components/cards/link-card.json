@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_cards_link_cards",
+  "info": {
+    "displayName": "Regular Card",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "sample"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "url": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "highlighted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_html_sections",
+  "info": {
+    "displayName": "HTML Section",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 60,
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

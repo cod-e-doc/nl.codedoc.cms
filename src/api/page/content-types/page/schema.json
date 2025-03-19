@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Pages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "showInMainMenu": {
+      "type": "boolean"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.seo"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.testimonials-section",
+        "sections.rich-text",
+        "sections.partners-section",
+        "sections.html-section",
+        "sections.hero-section",
+        "sections.contact-form-section",
+        "sections.cards-section"
+      ]
+    }
+  }
+}

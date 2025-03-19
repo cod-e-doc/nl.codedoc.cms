@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_testimonials_sections",
+  "info": {
+    "displayName": "Testimonials Section",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 60,
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.testimonials-card"
+    }
+  }
+}
