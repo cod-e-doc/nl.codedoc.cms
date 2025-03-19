@@ -10,13 +10,16 @@
     "author": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 25
     },
     "quote": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 255,
+      "required": true
     },
     "referenceUrl": {
-      "type": "string"
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?(www\\.)?[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/[^\\s#]*)?(#[a-zA-Z0-9-_]+)?$"
     }
   }
 }

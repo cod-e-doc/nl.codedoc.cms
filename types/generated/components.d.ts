@@ -15,7 +15,10 @@ export interface CardsLinkCard extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<false>;
     icon: Schema.Attribute.Enumeration<['sample']>;
     link: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 10;
+      }>;
     url: Schema.Attribute.String;
   };
 }
@@ -30,13 +33,13 @@ export interface CardsLogoCard extends Struct.ComponentSchema {
   attributes: {
     altText: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
+        maxLength: 125;
       }>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
+        maxLength: 32;
       }>;
     url: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -57,9 +60,13 @@ export interface CardsTestimonialsCard extends Struct.ComponentSchema {
     author: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
+        maxLength: 25;
+      }>;
+    quote: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    quote: Schema.Attribute.Text;
     referenceUrl: Schema.Attribute.String;
   };
 }
@@ -72,16 +79,23 @@ export interface GeneralSeo extends Struct.ComponentSchema {
     icon: 'search';
   };
   attributes: {
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
     illustration: Schema.Attribute.Media<'images'>;
     metas: Schema.Attribute.Component<'general.seo-meta', true>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
   };
 }
 
 export interface GeneralSeoMeta extends Struct.ComponentSchema {
   collectionName: 'components_general_seo_metas';
   info: {
+    description: '';
     displayName: 'SEO Meta';
     icon: 'code';
   };
@@ -99,17 +113,12 @@ export interface SectionsCardsSection extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    anchor: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-        minLength: 1;
-      }>;
+    anchor: Schema.Attribute.String;
     cards: Schema.Attribute.Component<'cards.link-card', true> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 1;
+        maxLength: 255;
       }>;
   };
 }
@@ -124,7 +133,6 @@ export interface SectionsContactFormSection extends Struct.ComponentSchema {
   attributes: {
     anchor: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
         minLength: 1;
       }> &
       Schema.Attribute.DefaultTo<'contact-us'>;
@@ -133,8 +141,7 @@ export interface SectionsContactFormSection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'info@codedoc.nl'>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 1;
+        maxLength: 255;
       }>;
   };
 }
@@ -166,16 +173,11 @@ export interface SectionsHtmlSection extends Struct.ComponentSchema {
     icon: 'code';
   };
   attributes: {
-    anchor: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-        minLength: 1;
-      }>;
+    anchor: Schema.Attribute.String;
     content: Schema.Attribute.Text;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 1;
+        maxLength: 255;
       }>;
   };
 }
@@ -188,17 +190,12 @@ export interface SectionsPartnersSection extends Struct.ComponentSchema {
     icon: 'user';
   };
   attributes: {
-    Anchor: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-        minLength: 1;
-      }>;
-    Counterparties: Schema.Attribute.Component<'cards.logo-card', true> &
+    anchor: Schema.Attribute.String;
+    counterparties: Schema.Attribute.Component<'cards.logo-card', true> &
       Schema.Attribute.Required;
-    Title: Schema.Attribute.String &
+    title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 1;
+        maxLength: 255;
       }>;
   };
 }
@@ -211,16 +208,11 @@ export interface SectionsRichText extends Struct.ComponentSchema {
     icon: 'write';
   };
   attributes: {
-    anchor: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-        minLength: 1;
-      }>;
+    anchor: Schema.Attribute.String;
     content: Schema.Attribute.Blocks;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 80;
+        maxLength: 255;
       }>;
   };
 }
@@ -233,16 +225,11 @@ export interface SectionsTestimonialsSection extends Struct.ComponentSchema {
     icon: 'star';
   };
   attributes: {
-    anchor: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-        minLength: 1;
-      }>;
+    anchor: Schema.Attribute.String;
     testimonials: Schema.Attribute.Component<'cards.testimonials-card', true>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-        minLength: 1;
+        maxLength: 255;
       }>;
   };
 }
