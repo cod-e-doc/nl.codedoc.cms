@@ -8,10 +8,12 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 60
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 160
     },
     "illustration": {
       "type": "media",

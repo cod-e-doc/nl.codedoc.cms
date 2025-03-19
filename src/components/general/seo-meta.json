@@ -2,15 +2,18 @@
   "collectionName": "components_general_seo_metas",
   "info": {
     "displayName": "SEO Meta",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "regex": "^[a-zA-Z0-9-_]{1,50}$"
     },
     "value": {
-      "type": "string"
+      "type": "string",
+      "regex": "^[\\p{L}\\p{N}\\p{P}\\p{Z}]{1,255}$"
     }
   }
 }

@@ -10,14 +10,12 @@
     "anchor": {
       "type": "string",
       "default": "contact-us",
-      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "maxLength": 60,
+      "regex": "^[a-zA-Z0-9][a-zA-Z0-9-_]{1,59}$",
       "minLength": 1
     },
     "title": {
       "type": "string",
-      "maxLength": 80,
-      "minLength": 1
+      "maxLength": 255
     },
     "destination": {
       "type": "email",

@@ -24,7 +24,9 @@
     },
     "linkedInProfile": {
       "type": "string",
-      "regex": "^[a-zA-Z0-9][a-zA-Z0-9_-]{2,99}$"
+      "regex": "^[a-zA-Z0-9][a-zA-Z0-9_-]+$",
+      "minLength": 2,
+      "maxLength": 99
     }
   }
 }

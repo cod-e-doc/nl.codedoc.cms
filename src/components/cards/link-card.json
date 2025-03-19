@@ -8,7 +8,9 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 10,
+      "required": false
     },
     "icon": {
       "type": "enumeration",
@@ -25,10 +27,12 @@
       "target": "api::page.page"
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?(www\\.)?[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/[^\\s#]*)?$"
     },
     "anchor": {
-      "type": "string"
+      "type": "string",
+      "regex": "^[a-zA-Z0-9][a-zA-Z0-9-_]{1,59}$"
     },
     "highlighted": {
       "type": "boolean",
