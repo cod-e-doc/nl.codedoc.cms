@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_cards_sections",
+  "info": {
+    "displayName": "Regular Cards Section",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "maxLength": 60,
+      "minLength": 1,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.link-card",
+      "required": true
+    }
+  }
+}

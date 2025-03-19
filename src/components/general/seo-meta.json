@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_general_seo_metas",
+  "info": {
+    "displayName": "SEO Meta",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

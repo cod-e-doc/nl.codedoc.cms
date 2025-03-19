@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cards_testimonials_cards",
+  "info": {
+    "displayName": "Testimonials Card",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "quote": {
+      "type": "text"
+    },
+    "referenceUrl": {
+      "type": "string"
+    }
+  }
+}

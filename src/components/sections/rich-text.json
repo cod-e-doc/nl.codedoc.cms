@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_rich_texts",
+  "info": {
+    "displayName": "Rich Text Section",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 60,
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 80
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

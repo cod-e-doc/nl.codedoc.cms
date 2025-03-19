@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_contact_form_sections",
+  "info": {
+    "displayName": "Contact Form Section",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "default": "contact-us",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 60,
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "destination": {
+      "type": "email",
+      "default": "info@codedoc.nl",
+      "required": true
+    }
+  }
+}
