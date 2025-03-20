@@ -12,7 +12,9 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 32,
+      "required": true
     },
     "page": {
       "type": "relation",
@@ -20,7 +22,14 @@
       "target": "api::page.page"
     },
     "anchor": {
-      "type": "string"
+      "type": "string",
+      "regex": "^[a-zA-Z0-9][a-zA-Z0-9-_]{1,59}$"
+    },
+    "position": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
     }
   }
 }
