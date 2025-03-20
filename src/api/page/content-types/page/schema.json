@@ -13,8 +13,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "minLength": 10,
+      "required": false,
       "maxLength": 50
     },
     "slug": {
@@ -23,11 +22,6 @@
       "required": true,
       "minLength": 3,
       "maxLength": 60
-    },
-    "showInMainMenu": {
-      "type": "boolean",
-      "default": false,
-      "required": true
     },
     "seo": {
       "type": "component",
