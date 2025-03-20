@@ -483,9 +483,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       ]
     >;
     seo: Schema.Attribute.Component<'general.seo', false>;
-    showInMainMenu: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -493,10 +490,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         minLength: 3;
       }>;
     title: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 50;
-        minLength: 10;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
